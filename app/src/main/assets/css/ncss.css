@@ -1,0 +1,62 @@
+.inputname{
+	width:20%;
+	left:5%;
+	bottom:21%;
+	line-height:40px;
+	font-size:14px;
+	position:absolute;
+}
+.name{
+	width:50%;
+	left:28%;
+	bottom:21%;
+	background:url(../img/12-1.png) no-repeat;
+	background-size:100% 100%;
+	position:absolute;
+}
+.name input{
+	width:100%;
+	line-height:40px;
+	font-size:14px;
+	padding-left:8px;
+	outline:none;
+	background-color:transparent;
+}
+.box12-but{
+	bottom:5%;
+	position:absolute;
+}
+.bg13{
+	width:100%;
+	background:url(../img/13.png) no-repeat;
+	background-size:100% 100%;
+}
+.box13-name{
+	padding:15% 0 0 8%;
+	font-size:16px;
+	font-weight:bold;
+}
+.box13{
+	width:100%;
+	bottom:25%;
+	position:absolute;
+}
+.box13-button1{
+	width:28%;
+	left:16%;
+	position:absolute;
+}
+.box13-button2{
+	width:28%;
+	right:20%;
+	position:absolute;
+}
+
+.makshare{
+	width:100%;
+	height:100%;
+	background:url(../img/share.png) no-repeat;
+	background-size:100% 100%;
+	position:absolute;
+	z-index:100;
+}

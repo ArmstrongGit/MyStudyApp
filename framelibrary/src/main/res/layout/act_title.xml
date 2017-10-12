@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/colorPrimary"
+    >
+    <RelativeLayout
+        android:id="@+id/rel_back"
+        android:layout_alignParentLeft="true"
+        android:layout_width="100dp"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_chevron_left_black_24dp"
+            />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/act_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Act标题"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        />
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.study">
+
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application
+
+        android:name=".BaseApplicatuon"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.ScondActivity" />
+        <activity android:name=".activity.ThirdActivity" />
+        <activity
+            android:name=".activity.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activity.Main3Activity" />
+        <activity android:name=".activity.H5MainActivity" />
+        <activity android:name=".activity.MoveActivity" />
+        <activity android:name=".beans.SliderMenuActivity" />
+        <activity android:name=".activity.TextInputActivity" />
+        <activity android:name=".activity.ToolBarActivity" />
+        <activity android:name=".translatebar.TranslateBarActivity" />
+        <activity
+            android:name=".activity.Main4Activity"
+            android:label="@string/title_activity_main4"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activity.FabActivity" />
+        <activity android:name=".AnimatorActivity" />
+        <activity android:name=".activity.MDAnimatorActivity" />
+        <activity
+            android:name=".activity.TanslationMDActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activity.MaskFilterActivity"></activity>
+    </application>
+
+</manifest>
