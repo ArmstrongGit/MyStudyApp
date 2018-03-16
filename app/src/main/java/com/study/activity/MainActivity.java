@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.os.Environment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,6 +12,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -48,6 +51,7 @@ import java.util.List;
 import java.util.Map;
 
 
+import cn.addapp.pickers.picker.DatePicker;
 import db.DaoSupportFactory;
 import db.DaoSupportImpl;
 import db.IDaoSupport;
@@ -72,7 +76,7 @@ public class MainActivity extends BaseTranslucentActivity {
     private TextView tvResult;
     private String TAG;
     private ArrayList<Integer> list = new ArrayList<>();
-
+    EditText ed_test1;
      String[] items ;
      boolean selected[] ;
 
@@ -177,9 +181,47 @@ public class MainActivity extends BaseTranslucentActivity {
         tvResult=(TextView)findViewById(R.id.tv_result);
         //1.注册广播
         EventBus.getDefault().register(this);
+        ed_test1= (EditText) findViewById(R.id.ed_test1);
+        ed_test1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(s.length()<2){
+                    Toast.makeText(MainActivity.this, "名字长度至少为"+s, Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                DatePicker picker = new DatePicker(MainActivity.this, DatePicker.YEAR_MONTH);
+//                picker.setGravity(Gravity.CENTER | Gravity.CENTER_HORIZONTAL);
+//                picker.setWidth((int) (picker.getScreenWidthPixels() * 0.6));
+                picker.setRangeStart(2016, 10, 14);
+                picker.setRangeEnd(2020, 11, 11);
+                picker.setSelectedItem(2017, 9);
+                picker.setCanLinkage(true);
+                picker.setCancelText("取消");
+                picker.setSubmitText("确定");
+                picker.setWeightEnable(true);
+                picker.setWheelModeEnable(true);
+                picker.setOnDatePickListener(new DatePicker.OnYearMonthPickListener() {
+                    @Override
+                    public void onDatePicked(String year, String month) {
+                        Toast.makeText(MainActivity.this, year + "-" + month, Toast.LENGTH_SHORT).show();
+                    }
+                });
+                picker.show();
+//                    ed_test1.setText("啦啦啦");
 //                EventBus.getDefault().postSticky(new Student("瓜皮测试数据"));
 //                Intent i=new Intent(MainActivity.this,FabActivity.class);
 //                startActivity(i);
@@ -267,8 +309,8 @@ public class MainActivity extends BaseTranslucentActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent i=new Intent(MainActivity.this,ThirdActivity.class);
-//                startActivity(i);
+                Intent i=new Intent(MainActivity.this,ScondActivity.class);
+                startActivity(i);
 
             }
         });
@@ -344,6 +386,9 @@ public class MainActivity extends BaseTranslucentActivity {
                 .subscribe(consumer);
 
 
+
+
+
 //      initOKGO3();
     }
 
@@ -362,6 +407,7 @@ public class MainActivity extends BaseTranslucentActivity {
 //                        Toast.makeText(MainActivity.this, "哈哈哈", Toast.LENGTH_SHORT).show();
 //                    }
 //                }).show();
+
 
 
     }

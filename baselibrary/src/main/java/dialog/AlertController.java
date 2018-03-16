@@ -14,7 +14,6 @@ import java.util.HashMap;
 /**
  * 作者： 苏晓伟 on 2017-9-29.
  * 邮箱：armstrong.su@b-psoft.com
- * Copyright (c) 上海商哲技术有限公司 All rights reserved.
  * Description:
  */
 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <CheckedTextView
+        android:textSize="14sp"
+        android:layout_gravity="center"
+        android:id="@+id/btn_tag"
+        android:background="@drawable/btn_tag_selector"
+        android:textColor="@drawable/color_radiobutton"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:layout_width="90dp"
+        android:layout_height="30dp"/>
+
+
+</LinearLayout>
